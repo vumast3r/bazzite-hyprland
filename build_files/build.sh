@@ -31,6 +31,8 @@ dnf install -y \
     cmake \
     ninja-build \
     gcc-c++ \
+    kitty \
+    swaybg \
     NetworkManager
 
 dnf clean all
