@@ -54,6 +54,16 @@ dnf install -y \
     gcc-c++ \
     kitty \
     swaybg \
+    libcava \
+    aubio \
+    libqalculate \
+    libnotify \
+    grim \
+    slurp \
+    wl-clipboard \
+    cliphist \
+    fuzzel \
     NetworkManager
 
 dnf clean all
+
