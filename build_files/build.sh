@@ -1,24 +1,36 @@
 #!/bin/bash
+set -euo pipefail
 
-set -ouex pipefail
+# Add the Hyprland COPR
+cat > /etc/yum.repos.d/lionheartp-Hyprland.repo << 'EOF'
+[copr:copr.fedorainfracloud.org:lionheartp:Hyprland]
+name=Copr repo for Hyprland owned by lionheartp
+baseurl=https://download.copr.fedorainfracloud.org/results/lionheartp/Hyprland/fedora-$releasever-$basearch/
+type=rpm-md
+skip_if_unavailable=True
+gpgcheck=1
+gpgkey=https://download.copr.fedorainfracloud.org/results/lionheartp/Hyprland/pubkey.gpg
+repo_gpgcheck=0
+enabled=1
+enabled_metadata=1
+EOF
 
-### Install packages
+# Install Hyprland and runtime dependencies needed by caelestia-shell
+dnf install -y \
+    hyprland \
+    hyprlock \
+    hypridle \
+    xdg-desktop-portal-hyprland \
+    qt6-qtdeclarative \
+    pipewire \
+    ddcutil \
+    brightnessctl \
+    lm_sensors \
+    fish \
+    swappy \
+    cmake \
+    ninja-build \
+    gcc-c++ \
+    NetworkManager
 
-# Packages can be installed from any enabled yum repo on the image.
-# RPMfusion repos are available by default in ublue main images
-# List of rpmfusion packages can be found here:
-# https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/43/x86_64/repoview/index.html&protocol=https&redirect=1
-
-# this installs a package from fedora repos
-dnf5 install -y tmux 
-
-# Use a COPR Example:
-#
-# dnf5 -y copr enable ublue-os/staging
-# dnf5 -y install package
-# Disable COPRs so they don't end up enabled on the final image:
-# dnf5 -y copr disable ublue-os/staging
-
-#### Example for enabling a System Unit File
-
-systemctl enable podman.socket
+dnf clean all
