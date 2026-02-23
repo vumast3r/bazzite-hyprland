@@ -52,7 +52,7 @@ dnf install -y \
     gcc-c++ \
     kitty \
     swaybg \
-    libcava \
+    cava \
     aubio \
     libqalculate \
     libnotify \
