@@ -22,6 +22,27 @@ dnf install -y \
     hypridle \
     xdg-desktop-portal-hyprland \
     qt6-qtdeclarative \
+    qt6-qtshadertools \
+    qt6-qtshadertools-devel \
+    qt6-qtdeclarative-devel \
+    qt6-qtwayland \
+    qt6-qtwayland-devel \
+    qt6-qtsvg \
+    spirv-tools \
+    wayland-devel \
+    wayland-protocols-devel \
+    libxcb-devel \
+    libdrm-devel \
+    mesa-libgbm-devel \
+    vulkan-headers \
+    jemalloc-devel \
+    pam-devel \
+    polkit-devel \
+    glib2-devel \
+    pipewire-devel \
+    cli11-devel \
+    pkg-config \
+    clang \
     pipewire \
     ddcutil \
     brightnessctl \
