@@ -39,11 +39,9 @@ dnf install -y \
     pam-devel \
     polkit-devel \
     glib2-devel \
-    pipewire-devel \
     cli11-devel \
     pkg-config \
     clang \
-    pipewire \
     ddcutil \
     brightnessctl \
     lm_sensors \
