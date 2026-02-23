@@ -5,7 +5,7 @@ ARG FEDORA_VERSION=stable
 FROM ghcr.io/ublue-os/${BASE_IMAGE_NAME}:${FEDORA_VERSION}
 
 # Copy caelestia to /usr/share
-COPY just/caelestia.just /usr/share/ublue-os/just/60-caelestia.just
+COPY just/caelestia.just /usr/share/ublue-os/just/60-custom.just
 
 # Point directly to the folder where the script lives
 COPY build_files/build.sh /tmp/build.sh
