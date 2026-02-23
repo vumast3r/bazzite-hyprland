@@ -20,6 +20,7 @@ dnf install -y \
     hyprland \
     hyprlock \
     hypridle \
+    scdoc \
     xdg-desktop-portal-hyprland \
     qt6-qtdeclarative \
     qt6-qtshadertools \
