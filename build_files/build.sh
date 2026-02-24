@@ -56,7 +56,7 @@ dnf install -y \
     kitty \
     cava \
     aubio \
-    libqalculate \
+    libqalculate-devel \
     libnotify \
     grim \
     slurp \
@@ -66,7 +66,6 @@ dnf install -y \
     curl \
     unzip \
     fontconfig \
-    qalculate-devel \
     NetworkManager
 
 dnf clean all
