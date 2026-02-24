@@ -3,8 +3,8 @@ install-caelestia:
     set -euo pipefail
 
     echo "Creating Nix toolbox..."
-    distrobox create --name nix-tools \
-        --image nixos/nix \
+    distrobox create --name caelestia-box \
+        --image archlinux:latest \
         --yes
 
     echo "Installing Caelestia inside toolbox..."
