@@ -16,17 +16,12 @@ install-caelestia:
     sudo tar -xzf /tmp/dart-sass.tar.gz -C /opt/
     sudo ln -sf /opt/dart-sass/sass /usr/local/bin/sass
 
-    # Install fonts
-    echo "Installing fonts..."
-    mkdir -p ~/.local/share/fonts
-    # CaskaydiaCove Nerd Font
-    curl -L "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/CascadiaCode.zip" -o /tmp/caskaydia.zip
-    unzip -o /tmp/caskaydia.zip -d ~/.local/share/fonts/CaskaydiaCove
-    # Material Symbols
-    curl -L "https://github.com/google/material-design-icons/releases/latest/download/MaterialSymbols.zip" -o /tmp/material-symbols.zip
-    unzip -o /tmp/material-symbols.zip -d ~/.local/share/fonts/MaterialSymbols
-    fc-cache -fv
-
+    # Install Material Symbols font
+    echo "Installing Material Symbols font..."
+    mkdir -p ~/.local/share/fonts/MaterialSymbols
+    curl -L "https://github.com/google/material-design-icons/raw/master/variablefont/MaterialSymbolsRounded%5BFILL%2CGRAD%2Copsz%2Cwght%5D.ttf" \
+        -o ~/.local/share/fonts/MaterialSymbols/MaterialSymbolsRounded.ttf
+fc-cache -fv
     # Build Quickshell
     echo "Building Quickshell..."
     rm -rf /tmp/quickshell
