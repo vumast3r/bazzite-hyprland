@@ -37,36 +37,18 @@ dnf install -y \
     hyprpicker \
     hyprpolkitagent \
     xdg-desktop-portal-hyprland \
-    quickshell-git \
-    breakpad \
-    gpu-screen-recorder \
-    scdoc \
-    qt6-qtdeclarative \
-    qt6-qtdeclarative-devel \
-    qt6-qtwayland \
-    qt6-qtsvg \
     ddcutil \
     brightnessctl \
     lm_sensors \
     fish \
-    swappy \
-    cmake \
-    ninja-build \
-    gcc-c++ \
     kitty \
-    cava \
-    aubio \
-    libqalculate-devel \
-    libnotify \
     grim \
     slurp \
     wl-clipboard \
     cliphist \
     fuzzel \
     curl \
-    unzip \
-    fontconfig \
-    NetworkManager
+    fontconfig
 
 dnf clean all
 
