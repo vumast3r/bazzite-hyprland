@@ -23,18 +23,6 @@ install-caelestia:
         -o ~/.local/share/fonts/MaterialSymbols/MaterialSymbolsRounded.ttf
     fc-cache -fv
 
-    # Build Quickshell
-    echo "Building Quickshell..."
-    rm -rf /tmp/quickshell
-    git clone https://github.com/quickshell-mirror/quickshell.git /tmp/quickshell
-    cd /tmp/quickshell
-    cmake -GNinja -B build \
-        -DCMAKE_BUILD_TYPE=RelWithDebInfo \
-        -DCMAKE_C_COMPILER=clang \
-        -DCMAKE_CXX_COMPILER=clang++
-    cmake --build build
-    sudo cmake --install build
-
     # Install caelestia-cli
     echo "Installing caelestia-cli..."
     rm -rf /tmp/caelestia-cli
