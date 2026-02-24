@@ -66,6 +66,7 @@ dnf install -y \
     curl \
     unzip \
     fontconfig \
+    qalculate-devel \
     NetworkManager
 
 dnf clean all
