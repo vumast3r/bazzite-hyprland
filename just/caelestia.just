@@ -30,7 +30,7 @@ install-caelestia:
     cd /tmp/caelestia-cli
     pip install build installer hatch hatch-vcs --break-system-packages
     python -m build --wheel
-    sudo python -m installer dist/*.whl
+    sudo pip install dist/*.whl --break-system-packages
     sudo cp completions/caelestia.fish /usr/share/fish/vendor_completions.d/caelestia.fish
 
     # Build caelestia-shell
