@@ -10,7 +10,7 @@ install-caelestia:
     echo "Installing Caelestia inside toolbox..."
     distrobox enter caelestia-box -- bash -c "
         sudo pacman -Syu --noconfirm
-        sudo pacman -S --noconfirm git base-devel
+        sudo pacman -S --noconfirm git base-devel vulkan-headers
         git clone https://aur.archlinux.org/yay.git /tmp/yay
         cd /tmp/yay && makepkg -si --noconfirm
         yay -S --noconfirm caelestia-shell caelestia-cli
