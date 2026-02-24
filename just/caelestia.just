@@ -5,7 +5,6 @@ install-caelestia:
     echo "Creating Nix toolbox..."
     distrobox create --name nix-tools \
         --image nixos/nix \
-        --volume /tmp:/tmp \
         --yes
 
     echo "Installing Caelestia inside toolbox..."
