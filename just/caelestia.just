@@ -6,8 +6,6 @@ install-caelestia:
     distrobox create --name nix-tools \
         --image nixos/nix \
         --volume /tmp:/tmp \
-        --env WAYLAND_DISPLAY=$WAYLAND_DISPLAY \
-        --env XDG_RUNTIME_DIR=$XDG_RUNTIME_DIR \
         --yes
 
     echo "Installing Caelestia inside toolbox..."
