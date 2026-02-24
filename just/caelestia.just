@@ -31,7 +31,8 @@ install-caelestia:
     pip install build installer hatch hatch-vcs --break-system-packages
     python -m build --wheel
     sudo pip install dist/*.whl --break-system-packages
-    sudo cp completions/caelestia.fish /usr/share/fish/vendor_completions.d/caelestia.fish
+    mkdir -p ~/.config/fish/completions
+    cp completions/caelestia.fish ~/.config/fish/completions/caelestia.fish
 
     # Build caelestia-shell
     echo "Building caelestia-shell..."
