@@ -21,7 +21,8 @@ install-caelestia:
     mkdir -p ~/.local/share/fonts/MaterialSymbols
     curl -L "https://github.com/google/material-design-icons/raw/master/variablefont/MaterialSymbolsRounded%5BFILL%2CGRAD%2Copsz%2Cwght%5D.ttf" \
         -o ~/.local/share/fonts/MaterialSymbols/MaterialSymbolsRounded.ttf
-fc-cache -fv
+    fc-cache -fv
+
     # Build Quickshell
     echo "Building Quickshell..."
     rm -rf /tmp/quickshell
