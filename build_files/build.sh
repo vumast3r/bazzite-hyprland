@@ -2,10 +2,23 @@
 set -euo pipefail
 
 # Add the Hyprland COPR
+cat > /etc/yum.repos.d/lionheartp-Hyprland.repo << 'EOF'
+[copr:copr.fedorainfracloud.org:lionheartp:Hyprland]
+name=Copr repo for Hyprland owned by lionheartp
+baseurl=https://download.copr.fedorainfracloud.org/results/lionheartp/Hyprland/fedora-43-x86_64/
+type=rpm-md
+skip_if_unavailable=True
+gpgcheck=1
+gpgkey=https://download.copr.fedorainfracloud.org/results/lionheartp/Hyprland/pubkey.gpg
+repo_gpgcheck=0
+enabled=1
+enabled_metadata=1
+EOF
+
 cat > /etc/yum.repos.d/errornointernet-quickshell.repo << 'EOF'
 [copr:copr.fedorainfracloud.org:errornointernet:quickshell]
 name=Copr repo for quickshell owned by errornointernet
-baseurl=https://download.copr.fedorainfracloud.org/results/errornointernet/quickshell/fedora-$releasever-$basearch/
+baseurl=https://download.copr.fedorainfracloud.org/results/errornointernet/quickshell/fedora-43-x86_64/
 type=rpm-md
 skip_if_unavailable=True
 gpgcheck=1
